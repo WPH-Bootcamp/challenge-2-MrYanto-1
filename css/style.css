@@ -179,6 +179,8 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  color: var(--color-neutral-25);
+  text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -197,6 +199,7 @@ section {
 body {
   line-height: 1;
   font-family: var(--font-family-base);
+  background-color: var(--color-black);
 }
 ol,
 ul {
@@ -216,4 +219,88 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.header {
+  display: flex;
+  position: static;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding-inline: var(--spacing-xl);
+  padding-block: var(--spacing-3xl);
+  background-color: #00000099;
+  border-bottom: 1px;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+.nav {
+  display: none;
+}
+
+.nav-item {
+  height: 36px;
+  padding-block: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cta {
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+  padding: 8px;
+  color: var(--color-white);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background-color: var(--color-primary);
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+
+#headCTA {
+  display: none;
+}
+
+.ham {
+  position: relative;
+}
+
+.hamCheck {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.hamCheck:checked ~ .nav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  width: calc(100% - 32px);
+  margin-left: 16px;
+}
+
+.hamCheck:checked ~ #headCTA {
+  display: block;
+  position: absolute;
+  top: 272px;
+  left: 0;
+  right: 0;
+  width: calc(100% - 32px);
+  margin-left: 16px;
 }
