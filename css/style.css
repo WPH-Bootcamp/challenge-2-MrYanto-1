@@ -477,14 +477,14 @@ table {
   gap: 24px;
 }
 
-.work-head {
+.head {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 8px;
 }
 
-.work-title {
+.title {
   font-size: var(--text-display-sm);
   line-height: 38px;
   text-align: center;
@@ -492,7 +492,7 @@ table {
   letter-spacing: -2%;
 }
 
-.work-title-desc {
+.title-desc {
   color: var(--color-neutral-500);
   font-size: var(--text-md);
   line-height: 30px;
@@ -522,6 +522,52 @@ table {
   line-height: 30px;
   letter-spacing: -2%;
   font-weight: var(--font-bold);
+}
+
+.team {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.teams-people {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.person-face {
+  width: clamp(10rem, 15.28vw, 13.75rem);
+}
+
+.person-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.person-name {
+  font-size: var(--text-md);
+  line-height: 30px;
+  letter-spacing: -2%;
+  font-weight: var(--font-bold);
+  text-align: center;
+}
+
+.person-role {
+  color: var(--color-neutral-500);
+  font-size: var(--text-sm);
+  line-height: 28px;
+  text-align: center;
 }
 
 @media screen and (min-width: 1440px) {
@@ -665,17 +711,17 @@ table {
     gap: 64px;
   }
 
-  .work-head {
+  .head {
     gap: 16px;
   }
 
-  .work-title {
+  .title {
     font-size: var(--text-display-xl);
     line-height: 56px;
     letter-spacing: -3%;
   }
 
-  .work-title-desc {
+  .title-desc {
     font-size: var(--text-lg);
     line-height: 32px;
   }
@@ -691,6 +737,33 @@ table {
   .portfolio-count {
     font-size: var(--text-xl);
     line-height: 34px;
+    letter-spacing: -3%;
+  }
+
+  .team {
+    padding-block: 80px;
+    gap: 64px;
+  }
+
+  .teams-people {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0px;
+  }
+
+  .person {
+    gap: 20px;
+  }
+
+  .person-name {
+    font-size: var(--text-xl);
+    line-height: 34px;
+    letter-spacing: -3%;
+  }
+
+  .person-role {
+    font-size: var(--text-md);
+    line-height: 30px;
     letter-spacing: -3%;
   }
 }
