@@ -415,4 +415,40 @@ table {
   .nav-bg {
     display: none;
   }
+
+  .hero {
+    display: flex;
+    height: 750px;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .hero-content {
+    width: 687px;
+    gap: 48px;
+  }
+
+  .hero-text {
+    gap: 16px;
+  }
+
+  .hero-title {
+    font-size: var(--text-display-3xl);
+    line-height: 68px;
+  }
+
+  .hero-description {
+    font-size: var(--text-xl);
+    line-height: 34px;
+  }
+
+  #heroCTA {
+    width: 300px;
+  }
+
+  .hero-image {
+    position: absolute;
+    right: 140px;
+    bottom: 3px;
+  }
 }
