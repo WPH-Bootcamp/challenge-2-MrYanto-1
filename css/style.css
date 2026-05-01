@@ -560,4 +560,48 @@ table {
     line-height: 42px;
     letter-spacing: -2%;
   }
+
+  .service {
+    margin-right: 0px;
+    padding-block: 80px;
+    gap: 64px;
+  }
+
+  .service-head {
+    gap: 16px;
+  }
+
+  .service-title {
+    font-size: var(--text-display-xl);
+    line-height: 56px;
+    letter-spacing: -3%;
+  }
+
+  .service-title-desc {
+    font-size: var(--text-lg);
+    line-height: 32px;
+    letter-spacing: -3%;
+  }
+
+  .service-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .service-item {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .service-name {
+    font-size: var(--text-xl);
+    line-height: 34px;
+    letter-spacing: -3%;
+  }
+
+  .service-description {
+    font-size: var(--text-md);
+    line-height: 30px;
+    letter-spacing: -3%;
+  }
 }
