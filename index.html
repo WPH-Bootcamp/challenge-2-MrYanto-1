@@ -35,7 +35,9 @@
           class="ham"
         />
       </label>
-      <button class="cta" id="headCTA">Contact Us</button>
+      <button class="cta" id="headCTA">
+        <a href="collaborate">Contact Us</a>
+      </button>
       <div class="nav-bg"></div>
     </header>
 
@@ -269,6 +271,49 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="collaborate container" id="collaborate">
+        <div class="head">
+          <h2 class="title">Let's Collaborate</h2>
+          <p class="title-desc">Need a tech team? We're ready to help</p>
+        </div>
+
+        <form action="" method="post" class="form-container">
+          <div class="form">
+            <div class="lab-in">
+              <label for="name" class="label">Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                class="input"
+              />
+            </div>
+
+            <div class="lab-in">
+              <label for="email" class="label">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                class="input"
+              />
+            </div>
+
+            <div class="lab-in">
+              <label for="msg" class="label">Message</label>
+              <textarea
+                name="message"
+                id="msg"
+                class="input"
+                placeholder="Enter your message"
+              ></textarea>
+            </div>
+          </div>
+
+          <button class="cta" type="submit">Send</button>
+        </form>
       </section>
     </main>
   </body>
