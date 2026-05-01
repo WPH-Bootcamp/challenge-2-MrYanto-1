@@ -223,7 +223,9 @@ table {
 
 .header {
   display: flex;
-  position: static;
+  position: sticky;
+  top: 0;
+  z-index: 20;
   justify-content: space-between;
   align-items: center;
   height: 64px;
@@ -237,6 +239,21 @@ table {
 
 .nav {
   display: none;
+}
+
+.nav-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-black);
+  z-index: 10;
+}
+
+.logo {
+  z-index: 30;
 }
 
 .nav-item {
@@ -275,6 +292,7 @@ table {
 
 .ham {
   position: relative;
+  z-index: 30;
 }
 
 .hamCheck {
@@ -293,6 +311,7 @@ table {
   right: 0;
   width: calc(100% - 32px);
   margin-left: 16px;
+  z-index: 30;
 }
 
 .hamCheck:checked ~ #headCTA {
@@ -303,4 +322,53 @@ table {
   right: 0;
   width: calc(100% - 32px);
   margin-left: 16px;
+  z-index: 30;
+}
+
+.hamCheck:checked ~ .nav-bg {
+  display: block;
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    padding: 0px;
+  }
+
+  .container {
+    padding-inline: 140px;
+  }
+
+  .hamCheck {
+    display: none;
+  }
+
+  .ham {
+    display: none;
+  }
+
+  label[for='menu-toggle'] {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: row;
+  }
+
+  .nav-item {
+    padding-block: 8px;
+    padding-inline: 16px;
+  }
+
+  #headCTA {
+    display: block;
+    width: 160px;
+  }
+
+  .nav-bg {
+    display: none;
+  }
 }
