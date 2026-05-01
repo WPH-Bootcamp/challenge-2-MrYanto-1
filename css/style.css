@@ -373,6 +373,32 @@ table {
   width: clamp(19.13rem, 42.14vw, 36.88rem);
 }
 
+.about {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-title {
+  font-size: var(--text-display-sm);
+  letter-spacing: -2%;
+  line-height: 38px;
+  font-weight: var(--font-bold);
+  text-align: center;
+}
+
+.about-description {
+  font-size: var(--text-lg);
+  line-height: 28px;
+  text-align: center;
+  font-weight: var(--font-semibold);
+}
+
+.about-highlight {
+  color: var(--color-neutral-500);
+}
+
 @media screen and (min-width: 1440px) {
   .header {
     padding: 0px;
@@ -417,6 +443,7 @@ table {
   }
 
   .hero {
+    position: relative;
     display: flex;
     height: 750px;
     align-items: center;
@@ -450,5 +477,17 @@ table {
     position: absolute;
     right: 140px;
     bottom: 3px;
+  }
+
+  .about-title {
+    font-size: var(--text-display-xl);
+    line-height: 56px;
+    letter-spacing: -3%;
+  }
+
+  .about-description {
+    font-size: var(--text-display-md);
+    line-height: 42px;
+    letter-spacing: -2%;
   }
 }
